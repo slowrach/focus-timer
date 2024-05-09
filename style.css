@@ -1,0 +1,97 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   font-size: clamp(40%, 1% + 2vw, 62.5%);
+   --background: #121214;
+   --bgButtons: #242424;
+   --text: #F8F8FC;
+   --icon-mode: #F8F8FC;
+   --secondary: #F8F8FC;
+   --border: #42D3FF;
+}
+
+html.light {
+   --background: #F8F8FC;
+   --text: #121214;
+   --icon-mode: #121214;
+   --secondary: #F8F8FC;
+}
+
+.screen-reader {
+   width: 1px;
+   height: 1px;
+   position: absolute;
+   overflow: hidden;
+   margin: -1px;
+   padding: 0;
+   border: 0;
+   appearance: none;
+}
+
+body {
+   background-color: var(--background);
+   color: var(--text);
+   display: grid;
+   height: 100vh;
+   place-content: center;
+}
+
+#project {
+   display: grid;
+   justify-items: center;
+}
+
+#mode {
+   position: absolute;
+   right: 3.2rem;
+   top: 3.2rem;
+   font-size: 3.2rem;
+   line-height: 0;
+   color: var(--icon-mode);
+}
+
+.time {
+   font-family: 'Roboto', sans-serif;
+   font-size: 9.6rem;
+   font-weight: 700;
+}
+
+.controls {
+   margin-top: 1.6rem;
+   background: var(--bgButtons);
+   padding: 2.2rem 4rem;
+   border-radius: 100rem;
+   gap: 1.6rem;
+   justify-content: center;
+   align-items: center;
+}
+
+button {
+   background: transparent;
+   border: 0;
+   color: var(--border);
+   font-size: 6.4rem;
+   cursor: pointer;
+}
+
+.flex {
+   display: flex;
+}
+
+.secondary {
+   color: var(--secondary);
+}
+
+.run .ph-play-circle, .run .ph-timer, .sound-on .ph-speaker-none, 
+html:not(.run) .ph-pause-circle, html:not(.run) .ph-stop-circle, html:not(.sound-on) .ph-speaker-high {
+   display: none;
+}
+
+html.light .ph-sun,
+html:not(.light) .ph-moon {
+   display: none;
+}
