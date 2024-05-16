@@ -1,7 +1,13 @@
 import { controls } from './controls.js';
+import * as actions from './actions.js'
 
 export function registerControls() {
    controls.addEventListener('click', (event) => {
-      console.log(event.target)
+      const action = event.target.dataset.action
+      if (typeof actions[action] != "function") {
+         return
+      }
+
+      actions[action]()
    })
 }
