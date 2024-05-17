@@ -6,7 +6,8 @@ export function start(minutes, seconds) {
    state.minutes = minutes
    state.seconds = seconds
 
-   timer.updateTime(0,0)
+   timer.updateTime()
 
    events.registerControls()
+   events.setMinutes()
 }
