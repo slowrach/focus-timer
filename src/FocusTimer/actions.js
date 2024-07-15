@@ -10,14 +10,11 @@ export function running() {
    sounds.buttonPress.play()
 }
 
-export function setTimerMinutes() {
+export function setTimer() {
+   sounds.buttonPress.play()
    elements.minutes.setAttribute('contenteditable', true)
-   elements.minutes.focus()
-}
-
-export function setTimerSeconds() {
    elements.seconds.setAttribute('contenteditable', true)
-   elements.seconds.focus()
+   elements.minutes.focus()
 }
 
 export function stop() {

@@ -16,17 +16,13 @@ export function registerControls() {
 }
 
 export function setMinutes() {
-   elements.minutes.addEventListener('focus', () => {
-      elements.minutes.textContent = ''
-   })
-
    elements.minutes.onkeypress = (event) => /\d/.test(event.key)
 
    elements.minutes.addEventListener('blur', (event) => {
-      let time = event.currentTarget.textContent
-      time = time > 60 ? 60 : time
+      let minute = event.currentTarget.textContent
+      minute = minute > 60 ? 60 : minute
 
-      state.minutes = time
+      state.minutes = minute
 
       updateTime()
       elements.minutes.removeAttribute('contenteditable')
@@ -34,10 +30,6 @@ export function setMinutes() {
 }
 
 export function setSeconds() {
-   elements.seconds.addEventListener('focus', () => {
-      elements.seconds.textContent = ' '
-   })
-
    elements.seconds.onkeypress = (event) => /\d/.test(event.key)
 
    elements.seconds.addEventListener('blur', (event) => {
