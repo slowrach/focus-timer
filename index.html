@@ -5,7 +5,7 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+   <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-svg">
    <link rel="stylesheet" href="style.css">
    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
    <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -31,8 +31,11 @@
          <button data-action="running" class="ph ph-pause-circle">
             <span class="screen-reader">Pausar cronômetro</span>
          </button>
-         <button data-action="setTimer" class="ph ph-timer secondary">
-            <span class="screen-reader">Ajustar o tempo do cronômetro</span>
+         <button data-action="setTimerMinutes" class="ph ph-timer secondary">
+            <span class="screen-reader">Ajustar os minutos do cronômetro</span>
+         </button>
+         <button data-action="setTimerSeconds" class="ph ph-clock-countdown secondary">
+            <span class="screen-reader">Ajustar os segundos do cronômetro</span>
          </button>
          <button data-action="stop" class="ph ph-stop-circle secondary">
             <span class="screen-reader">Reiniciar cronômetro</span>

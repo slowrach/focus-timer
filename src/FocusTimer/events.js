@@ -27,9 +27,26 @@ export function setMinutes() {
       time = time > 60 ? 60 : time
 
       state.minutes = time
-      state.seconds = 0
 
       updateTime()
       elements.minutes.removeAttribute('contenteditable')
+   })
+}
+
+export function setSeconds() {
+   elements.seconds.addEventListener('focus', () => {
+      elements.seconds.textContent = ' '
+   })
+
+   elements.seconds.onkeypress = (event) => /\d/.test(event.key)
+
+   elements.seconds.addEventListener('blur', (event) => {
+      let second = event.currentTarget.textContent
+      second = second > 60 ? 59 : second
+
+      state.seconds = second
+
+      updateTime()
+      elements.seconds.removeAttribute('contenteditable')
    })
 }

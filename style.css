@@ -86,7 +86,7 @@ button {
    color: var(--secondary);
 }
 
-.run .ph-play-circle, .run .ph-timer, .sound-on .ph-speaker-none, 
+.run .ph-play-circle, .run .ph-timer, .run .ph-clock-countdown, .sound-on .ph-speaker-none, 
 html:not(.run) .ph-pause-circle, html:not(.run) .ph-stop-circle, html:not(.sound-on) .ph-speaker-high {
    display: none;
 }
